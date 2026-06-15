@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Chinesisch-Trainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Chinesisch-Trainer</h1>
+
+    <div id="setup">
+        <p>Modus wählen:</p>
+        <button onclick="start(1)">Modus 1<br>Zeichen → Pinyin + Deutsch</button>
+        <button onclick="start(2)">Modus 2<br>Pinyin + Deutsch → Zeichen</button>
+    </div>
+
+    <div id="trainer" class="hidden">
+        <div id="counter"></div>
+        <div id="card"></div>
+        <div id="instruction">Space drücken</div>
+
+        <div id="buttons" class="hidden">
+            <button onclick="answer(true)">Gewusst ✓</button>
+            <button onclick="answer(false)">Nicht gewusst ✗</button>
+        </div>
+    </div>
+
+    <div id="finished" class="hidden">
+        <h2>Fertig!</h2>
+        <p>Du hast alle Zeichen gewusst.</p>
+        <button onclick="location.reload()">Neu starten</button>
+    </div>
+</div>
+
+<script src="zeichen.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
