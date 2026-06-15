@@ -10,6 +10,7 @@ const counter = document.getElementById("counter")
 function start(m) {
     modus = m
     stapel = [...zeichenListe]
+    stapel.sort(() => Math.random() - 0.5)
     document.getElementById("setup").classList.add("hidden")
     document.getElementById("trainer").classList.remove("hidden")
     zeigeKarte()
@@ -35,7 +36,11 @@ function zeigeKarte() {
 }
 
 document.addEventListener("keydown", e => {
-    if (e.code !== "Space" || stapel.length === 0 || aufgedeckt) return
+    if (e.code !== "Space") return
+
+    e.preventDefault()
+
+    if (stapel.length === 0 || aufgedeckt) return
 
     aufgedeckt = true
     const z = stapel[0]
