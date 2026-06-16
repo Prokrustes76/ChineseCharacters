@@ -68,5 +68,6 @@ const zeichenListe = [
     { deutsch: "fragen",              chinesisch: "问", pinyin: "wèn" },
     { deutsch: "neu",                 chinesisch: "新", pinyin: "xīn" },
     { deutsch: "alt",                 chinesisch: "老", pinyin: "lǎo" },
-    { deutsch: "schnell",             chinesisch: "快", pinyin: "kuài" }
+    { deutsch: "schnell",             chinesisch: "快", pinyin: "kuài" },
+    { deutsch: "und",                 chinesisch: "和", pinyin: "hé" }
 ]
